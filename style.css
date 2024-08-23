@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    transform-style: preserve-3d;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #e0e0e0;
+}
+
+.container {
+    width: 240px;
+    height: 300px;
+    position: relative;
+}
+
+.box {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    transition: transform 1s ease;
+}
+
+.box::before {
+    content: '';
+    position: absolute;
+    width: 240px;
+    height: 240px;
+    background: #2225;
+    z-index: 111;
+    transform: translateY(240px) rotateX(90deg) scale(1.1);
+    filter: blur(40px);
+}
+
+.card {
+    position: absolute;
+    width: 100%;
+    height: 300px;
+    background: linear-gradient(90deg, #f9feff, #fff9f9);
+    transform-origin: center;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+
+}
+
+.front {
+    transform: rotateY(0deg) translateZ(119px);
+}
+
+.back {
+    transform: rotateY(180deg) translateZ(119px);
+}
+
+.left {
+    transform: rotateY(-90deg) translateZ(119px);
+}
+
+.right {
+    transform: rotateY(90deg) translateZ(119px);
+}
+
+.card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 5px;
+
+}
+
+.card-content h2 {
+    font-size: 1.2em;
+    text-transform: uppercase;
+    line-height: 1em;
+    font-weight: 500;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    transform: translateZ(30px);
+}
+
+p {
+    margin: 0;
+    font-size: 0.75em;
+    color: rgb(0, 157, 255);
+    text-transform: uppercase;    transform-style: preserve-3d;
+    transform: translateZ(30px);
+    backface-visibility: hidden;
+
+}
+.controls {
+    position: absolute;
+    bottom: 80px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 20px;
+}
+
+.controls button {
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.controls button:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 8px rgba(0,0,0,0.2);
+}
+.controls button:active {
+    background-color: rgba(0, 0, 0, 0.377);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.342);
+}
+
+.controls button svg {
+    width: 24px;
+    height: 24px;
+    fill: #333;
+}

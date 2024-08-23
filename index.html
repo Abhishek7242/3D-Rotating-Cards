@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Rotating Cards</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <!-- Front card -->
+            <div class="card front">
+                <img src="https://image.benq.com/is/image/benqco/0-2?$ResponsivePreset$" alt="Front Image">
+                <div class="card-content">
+                    <h2>Front Title</h2>
+                    <p>Front description goes here.</p>
+                </div>
+            </div>
+
+            <!-- Back card -->
+            <div class="card back">
+                <img src="https://damassets.autodesk.net/content/dam/autodesk/www/industry/3d-animation/create-beautiful-3d-animations-thumb-1204x677.jpg" alt="Back Image">
+                <div class="card-content">
+                    <h2>Back Title</h2>
+                    <p>Back description goes here.</p>
+                </div>
+            </div>
+
+            <!-- Left card -->
+            <div class="card left">
+                <img src="https://www.freevector.com/uploads/vector/preview/6950/FreeVector-Free-3D-Design-Elements.jpg" alt="Left Image">
+                <div class="card-content">
+                    <h2>Left Title</h2>
+                    <p>Left description goes here.</p>
+                </div>
+            </div>
+
+            <!-- Right card -->
+            <div class="card right">
+                <img src="https://img.freepik.com/free-photo/3d-background-with-hexagonal-shapes-texture_23-2150473195.jpg" alt="Right Image">
+                <div class="card-content">
+                    <h2>Right Title</h2>
+                    <p>Right description goes here.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Controls -->
+    <div class="controls">
+        <button id="prev">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                <path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"/>
+            </svg>
+        </button>
+        <button id="next">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                <path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/>
+            </svg>
+        </button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
